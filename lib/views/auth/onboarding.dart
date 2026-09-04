@@ -144,7 +144,14 @@ class _OnboardingState extends State<Onboarding> {
                         currentPage++;
                       });
                     }
+                    controller.animateToPage(
+                      currentPage,
+                      duration: Duration(milliseconds: 60),
+                      curve: Curves.easeIn,
+                    );
+                    setState(() {});
                   },
+
                   elevation: 0,
                   backgroundColor: Color(0xff2563EB),
                   child: Icon(Icons.arrow_forward, color: Colors.white),
